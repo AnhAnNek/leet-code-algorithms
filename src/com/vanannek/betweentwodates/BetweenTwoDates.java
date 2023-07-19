@@ -1,9 +1,6 @@
 package com.vanannek.betweentwodates;
 
 public class BetweenTwoDates {
-
-    private final int[] daysOfMonths = new int[] {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
     public int daysBetweenDates(String date1, String date2) {
         int firstDays = daysFrom1971(date1);
         int secondDays = daysFrom1971(date2);
@@ -22,8 +19,13 @@ public class BetweenTwoDates {
     }
 
     public int getDayByMonthYear(int month, int year) {
-        int day = daysOfMonths[month];
-        return month == 2 && isLeapYear(year) ? day + 1 : day;
+        if (month == 4 || month == 6 || month == 9 || month == 11)
+            return 30;
+        if (month == 2 && isLeapYear(year))
+            return 29;
+        if (month == 2)
+            return 28;
+        return 31;
     }
 
     public int getDaysByYear(int year) {
