@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BetweenTwoDatesTest {
 
-    private BetweenTwoDates sol = new BetweenTwoDates();
+    private BetweenTwoDatesImpl sol = new BetweenTwoDatesImpl();
 
     @Test
     public void daysBetweenDates_TheSameYearAndMonth() {
