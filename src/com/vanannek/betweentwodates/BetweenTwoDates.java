@@ -1,6 +1,6 @@
 package com.vanannek.betweentwodates;
 
-public class BetweenTwoDatesImpl {
+public class BetweenTwoDates {
     /**
      * Calculates the number of days between two given dates.
      *
